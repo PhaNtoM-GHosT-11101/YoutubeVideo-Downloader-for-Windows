@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StreamVault Local by Aditya Priyadarshi</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #07090f;
+      --card: rgba(255, 255, 255, 0.07);
+      --line: rgba(255, 255, 255, 0.13);
+      --text: #f5f7fb;
+      --muted: #a1aec4;
+      --accent: #9dbbff;
+      --accent-2: #c7a7ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(77, 126, 255, 0.28), transparent 30rem),
+        radial-gradient(circle at bottom right, rgba(171, 116, 255, 0.26), transparent 28rem),
+        var(--bg);
+      color: var(--text);
+      padding: 28px;
+    }
+    main { width: min(1040px, 100%); margin: 0 auto; }
+    nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 72px; }
+    .brand { color: var(--text); font-weight: 900; letter-spacing: -0.04em; text-decoration: none; }
+    .pill { border: 1px solid var(--line); border-radius: 999px; color: var(--muted); padding: 10px 14px; text-decoration: none; }
+    .hero { display: grid; gap: 24px; margin-bottom: 28px; }
+    .eyebrow { color: var(--accent); font-size: 13px; font-weight: 900; letter-spacing: 0.18em; margin: 0; text-transform: uppercase; }
+    h1 { font-size: clamp(48px, 10vw, 104px); letter-spacing: -0.08em; line-height: 0.88; margin: 0; max-width: 850px; }
+    .lede { color: var(--muted); font-size: clamp(18px, 2.5vw, 23px); line-height: 1.6; max-width: 760px; margin: 0; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+    .button { background: linear-gradient(135deg, var(--accent), var(--accent-2)); border-radius: 16px; color: #07101c; font-weight: 900; padding: 15px 18px; text-decoration: none; }
+    .button.secondary { background: var(--card); border: 1px solid var(--line); color: var(--text); }
+    .grid { display: grid; gap: 14px; grid-template-columns: repeat(3, 1fr); margin-top: 40px; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 24px; padding: 22px; }
+    .card h2 { font-size: 18px; margin: 0 0 10px; }
+    .card p { color: var(--muted); line-height: 1.55; margin: 0; }
+    footer { color: var(--muted); margin-top: 56px; }
+    @media (max-width: 760px) {
+      body { padding: 20px; }
+      nav { margin-bottom: 48px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <nav>
+      <a class="brand" href="#">StreamVault Local</a>
+      <a class="pill" href="https://github.com/">GitHub Repository</a>
+    </nav>
+
+    <section class="hero">
+      <p class="eyebrow">By Aditya Priyadarshi</p>
+      <h1>Minimal local video downloading.</h1>
+      <p class="lede">StreamVault Local is a clean Python and Flask web app that runs on your machine, accepts a video URL, and saves the best available MP4 video with audio.</p>
+      <div class="actions">
+        <a class="button" href="../README.md">Read setup guide</a>
+        <a class="button secondary" href="https://github.com/">View on GitHub</a>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Local first</h2>
+        <p>Your downloads are saved directly on your computer in the project downloads folder.</p>
+      </article>
+      <article class="card">
+        <h2>High quality</h2>
+        <p>Uses yt-dlp to select the best MP4 video and audio streams, then merges them automatically.</p>
+      </article>
+      <article class="card">
+        <h2>GitHub ready</h2>
+        <p>Includes a professional README, license, requirements file, and GitHub Pages landing page.</p>
+      </article>
+    </section>
+
+    <footer>Copyright 2026 Aditya Priyadarshi. Built for responsible personal use.</footer>
+  </main>
+</body>
+</html>

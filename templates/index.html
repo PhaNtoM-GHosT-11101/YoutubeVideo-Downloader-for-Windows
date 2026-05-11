@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StreamVault Local</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">Built by Aditya Priyadarshi</p>
+      <h1>StreamVault Local</h1>
+      <p class="lede">A minimalist local web app for downloading publicly accessible videos in the best available MP4 quality with audio.</p>
+    </section>
+
+    <form id="download-form" class="card">
+      <label for="url">Video URL</label>
+      <div class="control-row">
+        <input id="url" name="url" type="url" placeholder="https://youtu.be/..." required autofocus>
+        <button id="start" type="submit">Download</button>
+      </div>
+      <p class="hint">Files are saved to the local <code>downloads</code> folder.</p>
+    </form>
+
+    <section id="panel" class="status-card" aria-live="polite">
+      <div class="status-row">
+        <strong id="status">Waiting</strong>
+        <span id="percent">0%</span>
+      </div>
+      <div class="bar"><div id="fill" class="fill"></div></div>
+      <p id="details" class="details"></p>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
